@@ -57,7 +57,7 @@ const restaurant = {
 // if (restaurant.openingHours && restaurant.openingHours.mon)
 //   console.log(restaurant.openingHours.mon.open); //quite messy when complex nesting
 
-//console.log(restaurant?.openingHours?.mon?.open);
+console.log(restaurant?.openingHours?.mon?.open);
 // ? check for each properties where is placed and doesn't produce an error if these properties are not present.
 
 const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
@@ -66,12 +66,12 @@ const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 //   //console.log(`On ${day}, we open at ${open}`);
 // }
 
-//checking if method exits before we call it.
-//console.log(restaurant.order?.(0, 1) ?? "Method doesn't exist"); //check if order method exist
+//checking if method exists before we call it.
+// console.log(restaurant.order?.(0, 1) ?? "Method doesn't exist"); //check if order method exist
 
 //checking empty array
 const users = [{ name: "shivam", email: "anything@email.com" }];
-//console.log(users[0]?.name ?? "User array empty");
+// console.log(users[0]?.name ?? "User array empty");
 
 //////////////////////////////*****************************////////////////////////////////
 //Loooping over an object
@@ -90,7 +90,6 @@ console.log(entries);
 
 //////////////////////////////*****************************////////////////////////////////
 
-/*
 restaurant.orderDelivery({
   time: "22:30",
   address: "Motera",
@@ -106,7 +105,6 @@ const ingredients = [
 ];
 
 restaurant.orderPasta(...ingredients);
-*/
 
 //////////////////////////////*****************************////////////////////////////////
 
@@ -137,11 +135,11 @@ console.log(menu);
 */
 
 //SPREAD, because on right side of assignment operator, '='
-/*
-const arr = [1, 2, ...[3, 4]];
-//REST, on left side of assignment operator
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+
+// const arr = [1, 2, ...[3, 4]];
+// //REST, on left side of assignment operator
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
 const [pizza, , risotto, ...otherFood] = [
   ...restaurant.mainMenu,
@@ -160,12 +158,11 @@ const add = function (...numbers) {
 
 add(2, 4, 5);
 add(1, 8, 9, 4, 3, 62);
-*/
 
 //////////////////////////////*****************************////////////////////////////////
 
 //Short circuiting: Use any data type and return any data type
-/*
+
 //OR operator short circuiting: short circuit when finds a truthy value
 console.log(3 || "Shivam"); //3 appeared first truthy value so returned value is 3
 console.log("" || "Shivam");
@@ -191,7 +188,6 @@ console.log(0 && "shivam");
 console.log(23 && "shivam");
 
 restaurant.orderPasta && restaurant.orderPasta("garlic", "cheese", "bread"); //replaced if statement
-*/
 
 //////////////////////////////*****************************////////////////////////////////
 
@@ -381,11 +377,12 @@ const orderSet = new Set(["Pasta", "Pizza", "Pizza", "Risotto", "Pasta"]);
 // console.log(orderSet.has("Pizza"));
 // console.log(orderSet.has("Bread"));
 // console.log(new Set("Shivam"));
-orderSet.add("Garlic Bread");
-orderSet.delete("Risotto");
+// orderSet.add("Garlic Bread");
+// orderSet.delete("Risotto");
 // console.log(orderSet);
 
 // orderSet.clear();
+// console.log(orderSet);
 
 const staff = ["waiter", "waiter", "chef", "manager", "chef", "waiter"];
 
@@ -464,7 +461,7 @@ const gameEvents = new Map([
   [80, "⚽ GOAL"],
   [92, "🔶 Yellow card"],
 ]);
-
+// console.log([...gameEvents.values()]);
 // console.log([...new Set(gameEvents.values())]);
 gameEvents.delete(64);
 // console.log(gameEvents);
@@ -490,15 +487,15 @@ const plane = "A320";
 
 // console.log(airline.indexOf("r"));
 // console.log(airline.lastIndexOf("r"));
-// console.log(airline.indexOf("portugal"));
+console.log(airline.indexOf("portugal"));
 // console.log(airline.slice(4));
 // console.log(airline.slice(4, 7));
 
 // console.log(airline.slice(0, airline.indexOf(" ")));
 // console.log(airline.slice(airline.lastIndexOf(" ") + 1));
 
-// console.log(new String("Shivam")); // This conversion takes place when we call a method on string.
-// console.log(typeof new String("Shivam"));
+console.log(new String("Shivam")); // This conversion takes place when we call a method on string.
+console.log(typeof new String("Shivam"));
 // console.log(airline.toLowerCase());
 // console.log(airline.toUpperCase());
 

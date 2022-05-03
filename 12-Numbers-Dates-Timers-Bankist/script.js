@@ -361,7 +361,7 @@ btnClose.addEventListener("click", function (e) {
 let sorted = false;
 btnSort.addEventListener("click", function (e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
+  displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
 
@@ -412,6 +412,7 @@ console.log(randInt(3, 8));
 //Rounding Integers
 console.log(Math.trunc(23.3)); //23  removes decimal part
 console.log(Math.round(23.3)); //23  removes decimal part
+console.log(Math.round(-23.7)); //-24
 console.log(Math.ceil(23.3)); //24 // round up
 console.log(Math.floor(23.3)); //23 //round down
 console.log(Math.floor("23.3")); //23
@@ -423,7 +424,6 @@ console.log((2.7).toFixed(0)); // '3', But return is a string
 console.log(+(2.247).toFixed(2)); //2.25
 console.log((2.247).toFixed(1)); //2.2
 */
-
 /*
 //Remainder operator
 console.log(5 % 2); //1
@@ -533,7 +533,6 @@ console.log(
   new Intl.NumberFormat(navigator.language, options).format(num)
 );
 */
-
 /*
 //set timeout It's once called after the mentioned time
 const ingredients = ["olives", "spinachs"];

@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
   console.log(firstName);
@@ -46,47 +46,53 @@ const matilda = {
 matilda.calcAge = shivam.calcAge; //method borrowing
 matilda.calcAge(); //this keyword in calcage function now points to matilda object
 
+
+*/
+/*
+
 // var firstName = "Shivam";
 
-// const shivam = {
-//   firstName: "Shivam",
-//   year: 1991,
+const shivam = {
+  firstName: "Shivam",
+  year: 1991,
 
-//   calcAge: function () {
-//     console.log(this);
-//     console.log(2037 - this.year);
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
 
-//     //SOLUTION 1
-//     /*
-//     const self = this;  //here we are preserving this keyword for isMillenial function
+    //SOLUTION 1
+    
+    // const self = this;  //here we are preserving this keyword for isMillenial function
 
-//     const isMillenial = function () {
-//       console.log(self.year >= 1981 && self.year <= 1996);
-//       // console.log(this.year >= 1981 && this.year <= 1996);
-//     };
-//     */
+    // const isMillenial = function () {
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+    
 
-//     //SOLUTION 2
-//     const isMillenial = () => {
-//       console.log(this.year >= 1981 && this.year <= 1996); //Arrow function doesn't get its own this keyword so it uses it's parent scope this keyword that is shivam
-//     };
-//     isMillenial();
-//   },
-//   greet: () => {
-//     console.log(`Hey ${this.firstName}`);
-//   },
-// };
+    //SOLUTION 2
+    const isMillenial = () => {
+      console.log(this.year >= 1981 && this.year <= 1996); //Arrow function doesn't get its own this keyword so it uses it's parent calcAge scope this keyword that is shivam object
+    };
+    isMillenial();
+  },
+  greet: () => {
+    console.log(`Hey ${this.firstName}`);
+  },
+};
 
-// shivam.greet(); //arrow function doesn't get there own this keyword so output is 'hey undefined'
-// //becoz this keyword get window object
-// shivam.calcAge();
+shivam.greet(); //arrow function doesn't get there own this keyword so output is 'hey undefined'
+//becoz this keyword get window object
+shivam.calcAge();
 
-// const addExpr = function (a, b) {
-//   console.log(arguments);
-// };
+const addExpr = function (a, b) {
+  console.log(arguments);
+};
 
-// addExpr(2, 3, 4);
-// //Arrow function doesn't get argument keyword.
+addExpr(2, 3, 4);
+//Arrow function doesn't get argument keyword.
+
+*/
 
 const ramesh = {
   firstName: "Ramesh",

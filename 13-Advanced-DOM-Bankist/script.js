@@ -114,6 +114,7 @@ tabsContainer.addEventListener("click", function (e) {
     .classList.add("operations__content--active");
 });
 
+////////////////////////////////////
 //Menu Fade animation
 
 const handleHover = function (e) {
@@ -140,7 +141,7 @@ nav.addEventListener("mouseout", handleHover.bind(1));
 // console.log(initialCoords);
 // window.addEventListener("scroll", function () {
 //   // console.log(window.scrollY);
-//   if (window.scrollY > initialCoords.top) nav.classList.add("sticky");
+//   if (window.sc9rollY > initialCoords.top) nav.classList.add("sticky");
 //   else nav.classList.remove("sticky");
 // });
 
@@ -162,6 +163,7 @@ const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
+
   // console.log(entry);
   if (!entry.isIntersecting) nav.classList.add("sticky");
   else nav.classList.remove("sticky");
@@ -422,7 +424,7 @@ document.querySelector(".nav__link").addEventListener("click", function (e) {
 });
 document.querySelector(".nav__links").addEventListener("click", function (e) {
   this.style.backgroundColor = randomColor();
-  console.log("CONTAINER", e.target, e.currentTarget); //e.target is still the link we clicked but current target is this and all those parent elements where we attached a click event handler.
+  console.log("CONTAINER", e.target, e.currentTarget); //e.target is still the link we clicked but current target is element attached with event handler.
 });
 document.querySelector(".nav").addEventListener(
   "click",
