@@ -433,7 +433,7 @@ class Account {
   }
   deposit(val) {
     this.#movements.push(val);
-    return this; //to enabale chaining , as acc1.deposit() will not return anything and it'll be undefined.deposti() further in chain.
+    return this; //return this to enabale chaining , as acc1.deposit() will not return anything and it'll be undefined.deposti() further in chain.
   }
   withdraw(val) {
     this.deposit(-val);
